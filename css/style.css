@@ -1,12 +1,13 @@
 :root{
-	--mainColor: grey;
-	--secondaryColor: lightgrey;
-	--borderColor: black;
-	--mainText: green;
-	--secondaryText: ;
+	--mainColor: #d4cfcf;
+	--secondaryColor: #ddf7f4fc;
+	--borderColor: #d4cfcf;
+	--mainText: #000000;
+	--secondaryText: #4fab4d;
 
 }
 html, body{
+	font-family: 'Roboto', sans-serif;
 	padding: 0px;
 	margin: 0px;
 }
@@ -18,10 +19,15 @@ h1, h2, h3, h4, h5, h6{
 	font-family: 'Prompt', sans-serif;
 }
 
-h1 {font-size: 50px;}
+h1 {font-size: 50px; text-align: center;}
 
 a{
 	text-decoration: none;
+	font-color: black;
+}
+
+li {
+	list-style: none;
 }
 
 .s1{
@@ -37,13 +43,14 @@ a{
 }
 
 .main-container {
-	background-color: white;
+	background-color: var(--mainColor);
 	width: 1200px;
 	margin: 0 auto;
 
 }
 
 .greeting-area {
+	background-color: var(--mainColor);
 	align-content: center;
 	justify-content: center;
 	min-height: 10em;
@@ -52,29 +59,62 @@ a{
 }
 
 .intro-section {
-	box-shadow: -18px 10px 40px -11px rgba(0,0,0,0.84);
-	-webkit-box-shadow: -18px 10px 40px -11px rgba(0,0,0,0.84);
-	-moz-box-shadow: -18px 10px 40px -11px rgba(0,0,0,0.84);
+	box-shadow: 0px 2px 8px 5px grey;
 	background-color: var(--secondaryColor);
-	border: 1px solid var(--mainColor); 
-
+	border: 1px solid var(--mainColor);
+	border-radius: 5px 5px 0px 0px;
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	grid-template-rows: 3em 30em;
+	grid-template-areas:
+		'nav nav'
+		'left-column right-column'
+	; 
 }
 
 .nav-section {
-	background-color: var(--secondaryColor);
-	border: 1px solid var(--mainColor);
+	grid-area: nav;
+	border-bottom: 2px solid var(--mainColor);
+	/*border-radius: 5px 5px 0px 0px;*/
+	display: flex;
+	justify-content: space-between;
+	align-content: center;
 }
+
+.dot-section {
+	display: flex;
+	padding: 10px;
+}
+
+#dot1 {background-color: #d2471d;}
+#dot2 {background-color: #e2c147;}
+#dot3 {background-color: #409e40;}
+
+
+.browser-dot {
+	box-shadow: -1px 2px 5px 0px black;
+	margin: 5px;
+	height: 15px;
+	width: 15px;
+	background-color: black;
+	border-radius: 50%
+}
+
+#contact-section {
+	padding: 10px;
+	margin: 0px;
+}
+
 .left-column {
+	grid-area: left-column;
 	background-color: var(--secondaryColor);
-	border: 1px solid var(--mainColor); 
+	/*border: 1px solid var(--mainColor); */
 }
 
 .right-column {
+	grid-column: right-column;
 	background-color: var(--secondaryColor);
-	border: 1px solid var(--mainColor); 
+	/*border: 1px solid var(--mainColor); */
 }
 
 
