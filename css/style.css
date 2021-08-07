@@ -1,6 +1,6 @@
 :root{
-	--mainColor: #d4cfcf;
-	--secondaryColor: #ddf7f4fc;
+	--mainColor: #595260;
+	--secondaryColor: #B2B1B9;
 	--borderColor: #d4cfcf;
 	--mainText: #000000;
 	--secondaryText: #4fab4d;
@@ -58,7 +58,7 @@ li {
 }
 
 .intro-section {
-	box-shadow: 0px 2px 8px 5px grey;
+	box-shadow: 0px 2px 8px 5px #2C2E43;
 	background-color: var(--secondaryColor);
 	border: 1px solid var(--mainColor);
 	border-radius: 5px 5px 0px 0px;
@@ -73,6 +73,7 @@ li {
 .nav-section {
 	background-color: #d4cfcf; 
 	grid-area: nav;
+	border-radius: 5px 5px 0px 0px;
 	border-bottom: 1.5px solid #c4c0c0;
 	display: flex;
 	justify-content: space-between;
@@ -171,7 +172,6 @@ li {
 
 @media screen and (max-width: 1200px){
 	.main-container{
-		background-color: white;
 		width: 95%;
 		margin: 0 auto;
 	}
