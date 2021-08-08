@@ -1,7 +1,7 @@
 :root{
 	--mainColor: #595260;
-	--secondaryColor: #B2B1B9;
-	--borderColor: #d4cfcf;
+	--secondaryColor: #b2b1b9;
+	--borderColor: #595260;
 	--mainText: #000000;
 	--secondaryText: #4fab4d;
 
@@ -13,21 +13,32 @@ html, body{
 }
 
 
-h1, h2, h3, h4, h5, h6{
+h1, h2, h3, h4, h5, h6, li{
 	color: var(--mainText);
 	font-family: 'Jost', sans-serif;
 }
 
-h1 {font-size: 50px; text-align: center;}
+h1 {font-size: 50px; text-align: center; color: white;}
+h2 {font-size: 35px;}
+h3 {font-size: 30px;}
+h4 {font-size: 18px;}
+
+p {
+	font-size: 18px;
+}
+
+li { font-weight: bold; font-size: 15px; }
 
 a{
 	text-decoration: none;
-	font-color: black;
+	color: purple;
 }
 
 li {
 	list-style: none;
 }
+
+hr {border: 1px solid black;}
 
 .s1{
 	background-color: var(--mainColor);
@@ -42,7 +53,7 @@ li {
 }
 
 .main-container {
-	background-color: var(--mainColor);
+	background-color: var(--secondaryColor);
 	width: 1200px;
 	margin: 0 auto;
 
@@ -91,7 +102,7 @@ li {
 
 
 .browser-dot {
-	box-shadow: -1px 2px 5px 0px black;
+	box-shadow: -1px 1px 3px -1px rgb(0 0 0 / 75%);
 	margin: 5px;
 	height: 15px;
 	width: 15px;
@@ -112,10 +123,9 @@ li {
 }
 
 #profile-img {
-	box-shadow: 0px 1px 12px 2px black;
+	box-shadow: 0px 1px 10px 1px #524d4d;
 	display: block;
 	margin: 0 auto;
-	border: 5px solid var(--mainColor);
 	height: 200px;
 	width: 200px;
 	border-radius: 50%;
@@ -137,6 +147,7 @@ li {
 }
 
 .theme-dot:hover{
+	border-color: white;
 	border-width: 5px;
 }
 
@@ -152,12 +163,12 @@ li {
 	align-content: center;
 	grid-column: right-column;
 	background-color: var(--secondaryColor);
-	
+	padding: 50px 0px;  
 }
 
 #text-box-shadow {
 	background-color: #d2cdcdb3;
-	width: 300px;
+	width: 280px;
 	height: 180px;
 	padding-left: 30px;
 	padding-top: 30px;
@@ -165,8 +176,61 @@ li {
 
 #right-text-box {
 	padding: 15px;
-	width: 300px;
+	width: 280px;
 	border: 1.5px solid black;
+}
+
+.about-section {
+	display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    padding-bottom: 50px;
+    padding-top: 50px;
+    gap: 100px;
+}
+
+.social-section {
+	padding-top: 100px;
+}
+
+
+#skills {
+	display: flex;
+	justify-content: space-evenly;
+	background-color: #d2cdcdb3;  
+}
+
+#social-img {
+	width: 100%;
+	border-radius: 5px;
+	box-shadow: 1px 2px 5px 2px grey;
+}
+
+
+.twitter-follow-button { 
+	box-shadow: -1px 1px 9px 0px grey;
+ 	margin-right: auto;
+	margin-left: auto;
+	display: block;
+}
+
+.linkedin-badge {
+	color: black;
+	box-shadow: -1px 1px 9px 0px grey;
+	margin-top: 10px;
+	border-radius: 3px; 
+	line-height: 0;
+    justify-content: center;
+    display: flex;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: lightblue;
+    height: 20px;
+    width: 148px;
+}
+
+.linkedin-badge:hover{
+	background-color: #5ecdf1;
+	cursor: pointer;
 }
 
 
@@ -188,6 +252,10 @@ li {
 	grid-template-areas:
 		'nav'
 		'left-column' 'right-column'
-	; 
-}
+		; 
+	}
+
+	.left-column {
+		justify-content: center;
+	}
 }
